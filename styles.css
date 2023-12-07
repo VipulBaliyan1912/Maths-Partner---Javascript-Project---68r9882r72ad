@@ -49,6 +49,13 @@ header {
   display: flex;
   gap: 24px;
   margin-top: 60px;
+  margin-left: 2px;
+}
+.main{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  /* background-color: aqua; */
 }
 .form label {
   display: block;
@@ -58,6 +65,7 @@ header {
 }
 #expression,
 #problemCategory {
+  margin-left: 14px;
   padding: 12px 24px;
   font-size: 24px;
   border: 1px solid black;
@@ -103,13 +111,14 @@ header {
   transition-delay: 0.2s;
   box-shadow: 2px 2px 2px grey;
 }
+
 .solution {
-  margin: 12px;
+  margin-left: 12px;
   background-color: grey;
   padding: 14px 34px;
   font-size: 24px;
   border-radius: 18px;
-  max-width: 575px;
+  max-width: 700px;
   height: 200px;
 }
 .solution:hover{
@@ -165,7 +174,49 @@ header {
   color: whitesmoke;
 }
 #loader{
-    margin-left: 25%;
+  text-align: center;
     font-size: smaller;
     display: none;
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 10px;
+  }
+  .solution{
+    height: 150px;
+  }
+  #expression ,
+  #problemCategory{
+  font-size: 16px;
+}
+#expression input{
+  padding: 2px;
+  width: 20px;
+  font-size: 10px;
+}
+#searchIcon{
+  font-size: 14px;
+}
+.problem-statement label{
+  font-size: 22px;
+}
+.category-selector label{
+  font-size: 18px;
+}
+.form{
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 14px;
+  
+}
+.solution #currProblemExpression{
+  font-size: 14px;
+}
+.solution #currProblemSolution{
+  font-size: 14px;
+}
+.form #searchIcon{
+  margin-top: 45px
+}
 }
